@@ -21,8 +21,8 @@ const Header = ({ getTotalItems }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
-            <h1 className="text-3xl font-bold text-amber-800">Kedai Katak</h1>
-            <span className="text-sm opacity-90 hidden sm:inline">Pilihan Tongkrongan Kalian</span>
+            <h1 className="text-3xl font-bold text-amber-800">seBAP</h1>
+            {/* <span className="text-sm opacity-90 hidden sm:inline">Pilihan Tongkrongan Kalian</span> */}
           </Link>
           
           <nav className="hidden md:flex space-x-8">

@@ -4,51 +4,190 @@ import { Star, ShoppingCart, Phone, Plus } from 'lucide-react';
 
 const HomePage = ({ products, addToCart }) => (
   <div className="min-h-screen">
-    <section className="bg-blue-50 py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">Segarkan Harimu dengan <span className="text-amber-800">Kedai Katak</span></h1>
-            <p className="text-xl text-gray-600 mb-8">Belinya disini, minumnya pas nogkrong.....</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/products" className="bg-amber-800 text-white px-8 py-4 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center">Lihat Produk</Link>
-              <Link to="/about" className="border-2 border-amber-800 text-amber-800 px-8 py-4 rounded-lg hover:bg-amber-800 hover:text-white transition-all duration-300 text-center">Pelajari Lebih Lanjut</Link>
-            </div>
-          </div>
-          <div className="relative"><div className="bg-amber-800 rounded-full p-8 shadow-2xl"><img src="https://i.imgur.com/gYodsX4.jpeg" alt="Minuman Seger" className="rounded-full w-full h-full object-cover"/></div></div>
+
+    {/* HERO CINEMATIC */}
+    <section
+      className="relative h-[90vh] flex items-center bg-cover bg-center"
+      style={{ backgroundImage: "url('https://i.imgur.com/gYodsX4.jpeg')" }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="container mx-auto px-6 relative z-10">
+        <h1 className="text-5xl md:text-7xl font-bold text-white max-w-2xl">
+          Nendang orang kurang afdol? <span className="text-amber-400">seBAP</span> jadi solusi
+        </h1>
+        <p className="text-gray-200 text-xl mt-6 max-w-xl">
+          sepatu bapak kurang kalcer pak
+        </p>
+        <div className="flex gap-4 mt-10">
+          <Link
+            to="/products"
+            className="bg-amber-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-amber-600 transition-all"
+          >
+            Gass cekott!
+          </Link>
+          <Link
+            to="/about"
+            className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-xl hover:bg-amber-400 hover:text-black transition-all"
+          >
+            Lihat Detail
+          </Link>
         </div>
       </div>
     </section>
-    {/* <section className="py-20">
+
+    {/* FEATURES */}
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Mengapa Memilih Fuyooo?</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          Kenapa Harus seBAP?
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"><div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"><Star className="w-8 h-8 text-white" /></div><h3 className="text-xl font-semibold mb-4 text-gray-800">Kualitas Premium</h3><p className="text-gray-600">Bahan-bahan berkualitas tinggi dipilih khusus untuk menghasilkan rasa terbaik</p></div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"><div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"><ShoppingCart className="w-8 h-8 text-white" /></div><h3 className="text-xl font-semibold mb-4 text-gray-800">Mudah Dipesan</h3><p className="text-gray-600">Sistem pemesanan yang mudah dan pengiriman cepat</p></div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"><div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4"><Phone className="w-8 h-8 text-white" /></div><h3 className="text-xl font-semibold mb-4 text-gray-800">Layanan 25/7</h3><p className="text-gray-600">Customer service yang siap membantu Anda kapan saja</p></div>
+          {[
+            {
+              title: "Bahan Berkualitas",
+              desc: "Ga ecek-ecek aseli",
+              color: "bg-amber-600",
+              icon: <Star className="w-10 h-10 text-white" />
+            },
+            {
+              title: "Harga Mahasiswa",
+              desc: "Bukan toko cina pelit",
+              color: "bg-green-600",
+              icon: <ShoppingCart className="w-10 h-10 text-white" />
+            },
+            {
+              title: "Siap Antar",
+              desc: "Pesan online, langsung meluncur ke tempatmu.",
+              color: "bg-blue-600",
+              icon: <Phone className="w-10 h-10 text-white" />
+            }
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all text-center"
+            >
+              <div
+                className={`w-20 h-20 ${item.color} rounded-full flex items-center justify-center mx-auto mb-6`}
+              >
+                {item.icon}
+              </div>
+              <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section> */}
+    </section>
+
+    {/* TESTIMONIALS */}
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Produk Populer</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+          Apa Kata Mereka?
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              name: "Wong fei hung",
+              text: "saya beli sepatu super disini",
+              img: "https://i.pravatar.cc/150?img=12"
+            },
+            {
+              name: "Megawati",
+              text: "rill kalcer!",
+              img: "https://i.pravatar.cc/150?img=32"
+            },
+            {
+              name: "el joko",
+              text: "anjay",
+              img: "https://i.pravatar.cc/150?img=44"
+            }
+          ].map((t, i) => (
+            <div
+              key={i}
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src={t.img}
+                  alt={t.name}
+                  className="w-14 h-14 rounded-full object-cover"
+                />
+                <h3 className="font-semibold text-lg text-gray-800">{t.name}</h3>
+              </div>
+              <p className="text-gray-600 italic">"{t.text}"</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* PRODUK POPULER */}
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+          Produk Populer
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.slice(0, 4).map(product => (
-            <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover"/>
+            <div
+              key={product.id}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-48 object-cover"
+              />
               <div className="p-4">
-                <h3 className="font-semibold text-gray-800 mb-2">{product.name}</h3>
-                <p className="text-gray-600 text-sm mb-2">{product.description}</p>
+                <h3 className="font-semibold text-gray-800 mb-2">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  {product.description}
+                </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-amber-800">Rp {product.price.toLocaleString()}</span>
-                  <button onClick={() => addToCart(product)} className="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300"><Plus className="w-4 h-4" /></button>
+                  <span className="text-lg font-bold text-amber-800">
+                    Rp {product.price.toLocaleString()}
+                  </span>
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8"><Link to="/products" className="bg-amber-800 text-white px-8 py-3 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300">Lihat Semua Produk</Link></div>
+
+        <div className="text-center mt-8">
+          <Link
+            to="/products"
+            className="bg-amber-800 text-white px-8 py-3 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300"
+          >
+            Lihat Semua Produk
+          </Link>
+        </div>
       </div>
+    </section>
+
+    {/* CTA SECTION */}
+    <section className="py-24 bg-amber-700 text-white text-center">
+      <h2 className="text-4xl font-bold mb-4">Siap nendang org?</h2>
+      <p className="text-lg mb-10">
+        Klik tombol di bawah dan temukan sepatu sekarang juga!
+      </p>
+
+      <Link
+        to="/products"
+        className="bg-white text-amber-700 px-10 py-4 text-lg rounded-xl font-semibold hover:bg-gray-200 transition-all"
+      >
+        Pesan Sekarang
+      </Link>
     </section>
   </div>
 );

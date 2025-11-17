@@ -110,7 +110,7 @@ const AppContent = () => {
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
