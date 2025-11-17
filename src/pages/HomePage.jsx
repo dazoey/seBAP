@@ -8,12 +8,12 @@ const HomePage = ({ products, addToCart }) => (
     {/* HERO CINEMATIC */}
     <section
       className="relative h-[90vh] flex items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('https://i.imgur.com/gYodsX4.jpeg')" }}
+      style={{ backgroundImage: "url('https://assets.pikiran-rakyat.com/crop/0x0:0x0/750x500/photo/2020/07/23/971283318.jpg')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-white max-w-2xl">
-          Nendang orang kurang afdol? <span className="text-amber-400">seBAP</span> jadi solusi
+          Nendang orang kurang afdol? <span className="text-yellow-400">seBAP</span> jadi solusi
         </h1>
         <p className="text-gray-200 text-xl mt-6 max-w-xl">
           sepatu bapak kurang kalcer pak
@@ -21,13 +21,13 @@ const HomePage = ({ products, addToCart }) => (
         <div className="flex gap-4 mt-10">
           <Link
             to="/products"
-            className="bg-amber-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-amber-600 transition-all"
+            className="bg-yellow-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-yellow-600 transition-all"
           >
             Gass cekott!
           </Link>
           <Link
             to="/about"
-            className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-xl hover:bg-amber-400 hover:text-black transition-all"
+            className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-xl hover:bg-yellow-400 hover:text-black transition-all"
           >
             Lihat Detail
           </Link>
@@ -47,7 +47,7 @@ const HomePage = ({ products, addToCart }) => (
             {
               title: "Bahan Berkualitas",
               desc: "Ga ecek-ecek aseli",
-              color: "bg-amber-600",
+              color: "bg-yellow-600",
               icon: <Star className="w-10 h-10 text-white" />
             },
             {
@@ -149,12 +149,12 @@ const HomePage = ({ products, addToCart }) => (
                   {product.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-amber-800">
+                  <span className="text-lg font-bold text-black">
                     Rp {product.price.toLocaleString()}
                   </span>
                   <button
                     onClick={() => addToCart(product)}
-                    className="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300"
+                    className="bg-black text-white px-4 py-2 rounded-lg hover:bg-yellow-600 hover:shadow-lg transition-all duration-300"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -167,7 +167,7 @@ const HomePage = ({ products, addToCart }) => (
         <div className="text-center mt-8">
           <Link
             to="/products"
-            className="bg-amber-800 text-white px-8 py-3 rounded-lg hover:bg-amber-900 hover:shadow-lg transition-all duration-300"
+            className="bg-black text-white px-8 py-3 rounded-lg hover:bg-yellow-600 hover:shadow-lg transition-all duration-300"
           >
             Lihat Semua Produk
           </Link>
@@ -176,7 +176,7 @@ const HomePage = ({ products, addToCart }) => (
     </section>
 
     {/* CTA SECTION */}
-    <section className="py-24 bg-amber-700 text-white text-center">
+    <section className="py-24 bg-black text-white text-center">
       <h2 className="text-4xl font-bold mb-4">Siap nendang org?</h2>
       <p className="text-lg mb-10">
         Klik tombol di bawah dan temukan sepatu sekarang juga!
@@ -184,7 +184,7 @@ const HomePage = ({ products, addToCart }) => (
 
       <Link
         to="/products"
-        className="bg-white text-amber-700 px-10 py-4 text-lg rounded-xl font-semibold hover:bg-gray-200 transition-all"
+        className="bg-white text-black px-10 py-4 text-lg rounded-xl font-semibold hover:bg-gray-200 transition-all"
       >
         Pesan Sekarang
       </Link>

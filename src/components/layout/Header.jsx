@@ -10,7 +10,7 @@ const Header = ({ getTotalItems }) => {
     const isActive = location.pathname === to;
     return (
       <Link
-        to={to} onClick={() => setIsMobileMenuOpen(false)} className={`px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'bg-white text-amber-800 shadow-md' : 'hover:bg-amber-600'}`}>
+        to={to} onClick={() => setIsMobileMenuOpen(false)} className={`px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'bg-white text-black shadow-md' : 'hover:bg-yellow-500'}`}>
         {children}
       </Link>
     );
@@ -21,7 +21,7 @@ const Header = ({ getTotalItems }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4">
-            <h1 className="text-3xl font-bold text-amber-800">seBAP</h1>
+            <h1 className="text-3xl font-bold text-black">seBAP</h1>
             {/* <span className="text-sm opacity-90 hidden sm:inline">Pilihan Tongkrongan Kalian</span> */}
           </Link>
           
@@ -32,7 +32,7 @@ const Header = ({ getTotalItems }) => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Link to="/payment" className="relative p-2 hover:bg-amber-600 rounded-lg transition-colors">
+            <Link to="/payment" className="relative p-2 hover:bg-yellow-500 rounded-lg transition-colors">
               <ShoppingCart className="w-6 h-6" />
               {getTotalItems() > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
@@ -40,12 +40,12 @@ const Header = ({ getTotalItems }) => {
                 </span>
               )}
             </Link>
-            <Link to="/profile" className="relative p-2 hover:bg-amber-600 rounded-lg transition-colors">
+            <Link to="/profile" className="relative p-2 hover:bg-yellow-500 rounded-lg transition-colors">
               <User className="w-6 h-6" />
             </Link>
             
             <button 
-              className="md:hidden p-2 hover:bg-amber-600 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}> 
+              className="md:hidden p-2 hover:bg-yellow-500 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}> 
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>

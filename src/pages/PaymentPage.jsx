@@ -21,9 +21,9 @@ const PaymentPage = ({ orderCompleted, cart, getTotalPrice, paymentMethod, setPa
           <div className="bg-green-50 p-4 rounded-lg mb-6 text-left">
             <h3 className="font-semibold mb-2">Detail Pesanan</h3>
             <p>Metode Pembayaran: {paymentMethod === 'cash' ? 'Tunai' : paymentMethod === 'bank' ? 'Transfer Bank' : 'E-Wallet'}</p>
-            <p>Total Pembayaran: <span className="font-bold">Rp {(getTotalPrice() + 5000).toLocaleString()}</span></p>
+            <p>Total Pembayaran: <span className="font-bold">Rp {(getTotalPrice() + 90000).toLocaleString()}</span></p>
           </div>
-          <button onClick={() => navigate('/')} className="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition-colors">Kembali ke Beranda Sekarang</button>
+          <button onClick={() => navigate('/')} className="w-full bg-black text-white py-3 rounded-lg hover:bg-yellow-600 transition-colors">Kembali ke Beranda Sekarang</button>
         </div>
       </div>
     );
@@ -47,8 +47,8 @@ const PaymentPage = ({ orderCompleted, cart, getTotalPrice, paymentMethod, setPa
               </div>
               <div className="mt-4 pt-4 border-t">
                 <div className="flex justify-between mb-2"><span>Subtotal</span><span>Rp {getTotalPrice().toLocaleString()}</span></div>
-                <div className="flex justify-between mb-2"><span>Biaya Pengiriman</span><span>Rp 5.000</span></div>
-                <div className="flex justify-between font-bold text-lg mt-3 pt-3 border-t"><span>Total Pembayaran</span><span>Rp {(getTotalPrice() + 5000).toLocaleString()}</span></div>
+                <div className="flex justify-between mb-2"><span>Biaya Pengiriman</span><span>Rp 90000</span></div>
+                <div className="flex justify-between font-bold text-lg mt-3 pt-3 border-t"><span>Total Pembayaran</span><span>Rp {(getTotalPrice() + 90000).toLocaleString()}</span></div>
               </div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md">
@@ -60,11 +60,10 @@ const PaymentPage = ({ orderCompleted, cart, getTotalPrice, paymentMethod, setPa
                 <div className="mb-6"><label className="block text-gray-700 mb-2">Catatan (Opsional)</label><textarea className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Contoh: Tolong jangan pakai gula"></textarea></div>
                 <h2 className="text-xl font-semibold mb-4 border-b pb-2">Metode Pembayaran</h2>
                 <div className="space-y-3 mb-6">
-                  <div onClick={() => setPaymentMethod('cash')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'cash' ? 'border-amber-800 bg-amber-50' : 'border-gray-300'}`}><Banknote className="w-6 h-6 mr-3 text-amber-800" /><div><h3 className="font-medium">Bayar di Tempat (Cash)</h3><p className="text-sm text-gray-500">Bayar tunai saat minuman diterima</p></div></div>
-                  <div onClick={() => setPaymentMethod('bank')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'bank' ? 'border-amber-800 bg-amber-50' : 'border-gray-300'}`}><CreditCard className="w-6 h-6 mr-3 text-amber-800" /><div><h3 className="font-medium">Transfer Bank</h3><p className="text-sm text-gray-500">BCA, BNI, BRI, Mandiri</p></div></div>
-                  <div onClick={() => setPaymentMethod('ewallet')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'ewallet' ? 'border-amber-800 bg-amber-50' : 'border-gray-300'}`}><Smartphone className="w-6 h-6 mr-3 text-amber-800" /><div><h3 className="font-medium">E-Wallet</h3><p className="text-sm text-gray-500">Gopay, OVO, Dana, ShopeePay</p></div></div>
-                </div>
-                <button type="submit" className="w-full bg-amber-800 text-white py-3 rounded-lg font-semibold hover:bg-amber-900 transition-colors">Konfirmasi Pembayaran</button>
+                  <div onClick={() => setPaymentMethod('cash')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'cash' ? 'border-yellow-400 bg-yellow-50' : 'border-gray-300'}`}><Banknote className="w-6 h-6 mr-3 text-yellow-400" /><div><h3 className="font-medium">Bayar di Tempat (Cash)</h3><p className="text-sm text-gray-500">Bayar tunai saat minuman diterima</p></div></div>
+                  <div onClick={() => setPaymentMethod('bank')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'bank' ? 'border-yellow-400 bg-yellow-50' : 'border-gray-300'}`}><CreditCard className="w-6 h-6 mr-3 text-yellow-400" /><div><h3 className="font-medium">Transfer Bank</h3><p className="text-sm text-gray-500">BCA, BNI, BRI, Mandiri</p></div></div>
+                  <div onClick={() => setPaymentMethod('ewallet')} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${paymentMethod === 'ewallet' ? 'border-yellow-400 bg-yellow-50' : 'border-gray-300'}`}><Smartphone className="w-6 h-6 mr-3 text-yellow-400" /><div><h3 className="font-medium">E-Wallet</h3><p className="text-sm text-gray-500">Gopay, OVO, Dana, ShopeePay</p></div></div>                </div>
+                <button type="submit" className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">Konfirmasi Pembayaran</button>
               </form>
             </div>
           </div>

@@ -27,7 +27,7 @@ const Cart = ({ cart, updateQuantity, removeFromCart, getTotalPrice }) => {
       </div>
       <div className="border-t pt-2 mt-2">
         <div className="flex justify-between font-semibold"><span>Total:</span><span>Rp {getTotalPrice().toLocaleString()}</span></div>
-        <button onClick={() => navigate('/payment')} className="w-full bg-amber-800 text-white py-2 rounded-lg mt-2 hover:bg-amber-900 hover:shadow-lg transition-all duration-300">Checkout</button>
+        <button onClick={() => navigate('/payment')} className="w-full bg-black text-white py-2 rounded-lg mt-2 hover:bg-yellow-600 hover:shadow-lg transition-all duration-300">Checkout</button>
       </div>
     </div>
   );

@@ -17,14 +17,14 @@ const AppContent = () => {
 
   useEffect(() => {
     const localProducts = [
-      { id: 1, name: "Esteh Anget", price: 3500, image: "https://i.imgur.com/CT92xZA.jpeg", category: "Teh", description: "pokoknya teh" },
-      { id: 2, name: "Kopsu", price: 6000, image: "https://i.imgur.com/7MvlKK9.jpeg", category: "Kopi", description: "Kopi zuzuuu" },
-      { id: 3, name: "nuruk", price: 5000, image: "https://i.imgur.com/aknoB4D.jpeg", category: "Jus", description: "Nutrisari jeruk ajh" },
-      { id: 4, name: "Smoothies", price: 10000, image: "https://i.imgur.com/gYodsX4.jpeg", category: "Smoothies", description: "Smoothie creamy tapi tapi tapi" },
-      { id: 5, name: "Susu Goyang", price: 8000, image: "https://i.imgur.com/8FBBG1m.jpeg", category: "Milkshake", description: "Milkshake es tapi anget" },
-      { id: 6, name: "Es Kelapa Young", price: 9000, image: "https://i.imgur.com/3cax3Vm.jpeg", category: "Tradisional", description: "Buah kelapa di pukul2, terus di kasih es" },
-      { id: 7, name: "Thai Tea", price: 5000, image: "https://i.imgur.com/ZgGmXDm.jpeg", category: "Teh", description: "wong fei hung jago silat" },
-      { id: 8, name: "RRQ Lemon Tea", price: 5000, image: "https://i.imgur.com/dfzyTAt.jpeg", category: "Teh", description: "Jendral hirohito kalo jadi minuman" }
+      { id: 1, name: "Ceker kalcer", price: 50000000, image: "https://i.pinimg.com/736x/1e/d1/63/1ed1634597fc5556565d2bec53943792.jpg", category: "high heels", description: "" },
+      { id: 2, name: "Sikil kalcer", price: 908866, image: "https://i.pinimg.com/736x/b6/d0/91/b6d0912e9ab6331b67e4cd26351984b9.jpg", category: "sepatu", description: "" },
+      { id: 3, name: "Sandal koruptor", price: 129128947198124, image: "https://i.pinimg.com/736x/c5/b3/b4/c5b3b4e7e15e41fed53cbdf6b779cf21.jpg", category: "sandal", description: "" },
+      { id: 4, name: "Sandal musang king", price: 3427856837465, image: "https://i.pinimg.com/736x/4e/53/3b/4e533bc11729fbaa03f43c6768670dc7.jpg", category: "sandal", description: "" },
+      { id: 5, name: "Gawang kiri kanan", price: 210284998, image: "https://i.pinimg.com/736x/4e/ab/8b/4eab8bd8c254b8df9287e33fef26ca8c.jpg", category: "sandal", description: "" },
+      { id: 6, name: "Pindang", price: 9009990, image: "https://i.pinimg.com/736x/8d/25/0e/8d250e90bac10ae386156cc4c0c4b3b8.jpg", category: "sandal", description: "" },
+      { id: 7, name: "Sandal roda", price: 9183274982364, image: "https://i.pinimg.com/736x/a6/78/d4/a678d4c781a76cc376d3677a05aafcc8.jpg", category: "sandal", description: "" },
+      { id: 8, name: "flip-flop", price: 122445757, image: "https://i.pinimg.com/736x/04/09/52/040952d77bab6eb4fc1612af01e2c0ae.jpg", category: "sandal", description: "" }
     ];
     setIsLoading(true);
     const timer = setTimeout(() => {

@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-amber-800">Kedai katak</h3>
+            <h3 className="text-2xl font-bold mb-4 text-black">Kedai katak</h3>
             <p className="text-gray-400 mb-4">Toko minuman segar.</p>
             {/* <div className="flex space-x-2">
               {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
